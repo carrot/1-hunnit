@@ -1,0 +1,88 @@
+name: 1hunnit
+description: you already know
+avatar: resources/static.png
+config:
+ - name: ADMIN1
+   friendly_name: Anonymous admin 1
+   info: wouldnt you like to know
+   type: secret
+   default: xxx
+   global: true
+ - name: ADMIN2
+   friendly_name: Anonymous admin 2
+   info: wouldnt you like to know
+   type: secret
+   default: xxx
+   global: true
+ - name: ADMIN3
+   friendly_name: Anonymous admin 2
+   info: wouldnt you like to know
+   type: secret
+   default: xxx
+   global: true
+ - name: ADMIN4
+   friendly_name: Anonymous admin 2
+   info: wouldnt you like to know
+   type: secret
+   default: xxx
+   global: true
+ - name: ADMIN5
+   friendly_name: Anonymous admin 2
+   info: wouldnt you like to know
+   type: secret
+   default: xxx
+   global: true
+ - name: ADMIN6
+   friendly_name: Anonymous admin 2
+   info: wouldnt you like to know
+   type: secret
+   default: xxx
+   global: true
+ - name: ADMIN7
+   friendly_name: Anonymous admin 2
+   info: wouldnt you like to know
+   type: secret
+   default: xxx
+   global: true
+ - name: ADMIN8
+   friendly_name: Anonymous admin 2
+   info: wouldnt you like to know
+   type: secret
+   default: xxx
+   global: true
+ - name: ADMIN9
+   friendly_name: Anonymous admin 2
+   info: wouldnt you like to know
+   type: secret
+   default: xxx
+   global: true
+ - name: ADMIN10
+   friendly_name: Anonymous admin 2
+   info: wouldnt you like to know
+   type: secret
+   default: xxx
+   global: true
+ - name: ADMIN11
+   friendly_name: Anonymous admin 2
+   info: wouldnt you like to know
+   type: secret
+   default: xxx
+   global: true
+ - name: ADMIN12
+   friendly_name: Anonymous admin 2
+   info: wouldnt you like to know
+   type: secret
+   default: xxx
+   global: true
+ - name: ADMIN13
+   friendly_name: Anonymous admin 2
+   info: wouldnt you like to know
+   type: secret
+   default: xxx
+   global: true
+ - name: BANNED_FOR_LIFE_1
+   friendly_name: Banned 1
+   info: wouldnt you like to know
+   type: secret
+   default: xxx
+   global: true
