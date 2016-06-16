@@ -1,0 +1,28 @@
+{
+  "name": "1hunnit",
+  "version": "1.0.0",
+  "description": "you already know",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carrot/1hunnit"
+  },
+  "keywords": [
+    "slackbot",
+    "bot",
+    "slack"
+  ],
+  "author": "2020Deception",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beepboophq/node-slack-bot/issues"
+  },
+  "homepage": "https://github.com/beepboophq/node-slack-bot#readme",
+  "dependencies": {
+    "beepboop-botkit": "^1.4.0",
+    "botkit": "~0.1.1"
+  }
+}
