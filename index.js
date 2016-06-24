@@ -76,6 +76,7 @@ controller.hears([
   new RegExp('\\bshots fired\\b', 'i'),
   new RegExp('\\byou are fired\\b', 'i'),
   new RegExp('\\bfood', 'i'),
+  new RegExp('\\boh shit\\b', 'i'),
   new RegExp('\\bWHO IS THE BEST WRESTLER EVER?\\b', 'i'),
   new RegExp('\\bWHAT IS TURNIP SOLUTIONS?\\b', 'i'),
   'weed', 'turnip'],
@@ -150,6 +151,11 @@ function react (bot, message) {
   }
   if (message.text.toUpperCase() === 'WHO IS FRANK?') {
     bot.reply(message, 'Not to front, Frank White was the King Of New York. Franco Jaramillo is the best producer since Dr Dre. :100:')
+  }
+  if (message.text.toUpperCase().indexOf('OH SHIT') > -1) {
+    if (message.user === 'U024GG01L' || message.user === 'U09NPAG11' || message.user === '@U09NPMD9D') {
+      bot.reply(message, 'http://i.imgur.com/aMgG2jh.gif')
+    }
   }
   if (message.text.toUpperCase().indexOf('FIGURE IT OUT') > -1) {
     if (message.user === 'U024GG01L' || message.user === 'U09NPAG11') {
