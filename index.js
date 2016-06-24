@@ -86,20 +86,20 @@ controller.hears([
 function react (bot, message) {
   function pushBooks () {
     rxn.push(
-      'notebook',
+      'notebook'/*,
       'green_book',
       'closed_book',
       'blue_book',
       'orange_book',
       'books',
       'book',
-      'notebook_with_decorative_cover'
+      'notebook_with_decorative_cover'*/
     )
   }
 
   function pushFood () {
     rxn.push(
-      'apple',
+      'apple'/*,
       'green_apple',
       'turnip',
       'pear',
@@ -127,7 +127,7 @@ function react (bot, message) {
       'honey_pot',
       'cheese_wedge',
       'meat_on_bone',
-      'fork_and_knife'
+      'fork_and_knife'*/
     )
   }
 
