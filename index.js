@@ -153,7 +153,7 @@ function react (bot, message) {
     bot.reply(message, 'Not to front, Frank White was the King Of New York. Franco Jaramillo is the best producer since Dr Dre. :100:')
   }
   if (message.text.toUpperCase().indexOf('OH SHIT') > -1) {
-    if (message.user === 'U024GG01L' || message.user === 'U09NPAG11' || message.user === '@U09NPMD9D') {
+    if (message.user === 'U024GG01L' || message.user === 'U09NPAG11' || message.user === 'U09NPMD9D') {
       bot.reply(message, 'http://i.imgur.com/aMgG2jh.gif')
     }
   }
