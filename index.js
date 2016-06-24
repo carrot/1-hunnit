@@ -8,7 +8,6 @@ var controller = Botkit.slackbot({
   retry: Infinity,
   debug: false
 })
-
 // Assume single team mode if we have a SLACK_TOKEN
 if (token) {
   console.log('Starting in single-team mode')
@@ -68,6 +67,7 @@ controller.hears([
   new RegExp('\\bbook', 'i'),
   new RegExp('\\billiterate', 'i'),
   new RegExp('\\bshame\\b', 'i'),
+  new RegExp('\\bnah\\b', 'i'),
   new RegExp('\\brunning', 'i'),
   new RegExp('\\bsuck it', 'i'),
   new RegExp('\\bfrfr\\b', 'i'),
@@ -151,6 +151,11 @@ function react (bot, message) {
   }
   if (message.text.toUpperCase() === 'WHO IS FRANK?') {
     bot.reply(message, 'Not to front, Frank White was the King Of New York. Franco Jaramillo is the best producer since Dr Dre. :100:')
+  }
+  if (message.text.toUpperCase().indexOf('NAH') > -1) {
+    if (message.user === 'U08GT2AKC' || message.user === 'U09NPAG11') {
+      bot.reply(message, 'http://67.media.tumblr.com/4025b025994a6d2be7814be7ff1b6058/tumblr_n0ntau9Unr1qhcz8uo1_400.gif')
+    }
   }
   if (message.text.toUpperCase().indexOf('OH SHIT') > -1) {
     if (message.user === 'U024GG01L' || message.user === 'U09NPAG11' || message.user === 'U09NPMD9D') {
