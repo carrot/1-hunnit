@@ -133,7 +133,7 @@ function react (bot, message) {
     )
   }
 
-  if (message.user === 'U09NPAG11' || message.user === 'U08GT2AKC' || message.user === 'U0E5ATAET' ||message.user === 'U0B21BV0E' || message.user === 'U09NPMD9D' || message.user === 'U024GG01L' || message.user === 'U054D7BLQ') {
+  if (message.user === 'U09NPAG11' || message.user === 'U08GT2AKC' || message.user === 'U0E5ATAET' || message.user === 'U0B21BV0E' || message.user === 'U09NPMD9D' || message.user === 'U024GG01L' || message.user === 'U054D7BLQ') {
     if (message.text.toUpperCase() === 'WHO IS BRIAN BOWMAN?') {
       bot.reply(message, 'Did you even have to ask that? He is someone who always keeps it :100:')
     }
