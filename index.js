@@ -85,22 +85,23 @@ controller.hears([
 )
 
 function react (bot, message) {
+  var rxn = ['100']
   function pushBooks () {
     rxn.push(
-      'notebook'/*,
+      'notebook',
       'green_book',
       'closed_book',
       'blue_book',
       'orange_book',
       'books',
       'book',
-      'notebook_with_decorative_cover'*/
+      'notebook_with_decorative_cover'
     )
   }
 
   function pushFood () {
     rxn.push(
-      'apple'/*,
+      'apple',
       'green_apple',
       'turnip',
       'pear',
@@ -128,113 +129,114 @@ function react (bot, message) {
       'honey_pot',
       'cheese_wedge',
       'meat_on_bone',
-      'fork_and_knife'*/
+      'fork_and_knife'
     )
   }
 
-  var rxn = ['100']
-  if (message.text.toUpperCase() === 'WHO IS BRIAN BOWMAN?') {
-    bot.reply(message, 'Did you even have to ask that? He is someone who always keeps it :100:')
-  }
-  if (message.text.toUpperCase() === 'WHO IS MATT SLITER?') {
-    rxn.push('basketball', 'eyes', 'muscle', 'fire', 'gun')
-    bot.reply(message, 'The crossover king. He\'s only here so he don\'t get fined.')
-  }
-  if (message.text.toUpperCase() === 'WHO IS REHMAT QADIR?') {
-    bot.reply(message, 'Not to front, he is someone who always keeps it :100: and he lives in a VR/AR world unlike you plebians :100:')
-  }
-  if (message.text.toUpperCase() === 'WHO IS LITTLE ELVIN?') {
-    bot.reply(message, 'Not to front, stopping interrupting him because he is someone who always keeps it :100: and he is really good developer. :100:')
-  }
-  if (message.text.toUpperCase() === 'WHO IS DIGGITY DOM?') {
-    bot.reply(message, 'Not to front, he is master of QA aka Smooth criminal of code breaks. Get it right. :100:')
-  }
-  if (message.text.toUpperCase() === 'WHO IS FRANK?') {
-    bot.reply(message, 'Not to front, Frank White was the King Of New York. Franco Jaramillo is the best producer since Dr Dre. :100:')
-  }
-  if (message.text.toUpperCase().indexOf('NAH') > -1) {
-    if (message.user === 'U08GT2AKC' || message.user === 'U09NPAG11') {
-      bot.reply(message, 'http://67.media.tumblr.com/4025b025994a6d2be7814be7ff1b6058/tumblr_n0ntau9Unr1qhcz8uo1_400.gif')
+  if (message.user === 'U09NPAG11' || message.user === 'U08GT2AKC' || message.user === 'U0E5ATAET' ||message.user === 'U0B21BV0E' || message.user === 'U09NPMD9D' || message.user === 'U024GG01L' || message.user === 'U054D7BLQ') {
+    if (message.text.toUpperCase() === 'WHO IS BRIAN BOWMAN?') {
+      bot.reply(message, 'Did you even have to ask that? He is someone who always keeps it :100:')
     }
-  }
-  if (message.text.toUpperCase().indexOf('OH SHIT') > -1) {
-    if (message.user === 'U024GG01L' || message.user === 'U09NPAG11' || message.user === 'U09NPMD9D') {
-      bot.reply(message, 'http://i.imgur.com/aMgG2jh.gif')
+    if (message.text.toUpperCase() === 'WHO IS MATT SLITER?') {
+      rxn.push('basketball', 'eyes', 'muscle', 'fire', 'gun')
+      bot.reply(message, 'The crossover king. He\'s only here so he don\'t get fined.')
     }
-  }
-  if (message.text.toUpperCase().indexOf('FIGURE IT OUT') > -1) {
-    if (message.user === 'U024GG01L' || message.user === 'U09NPAG11') {
-      bot.reply(message, 'http://imgur.com/38bP71C.gif')
+    if (message.text.toUpperCase() === 'WHO IS REHMAT QADIR?') {
+      bot.reply(message, 'Not to front, he is someone who always keeps it :100: and he lives in a VR/AR world unlike you plebians :100:')
     }
+    if (message.text.toUpperCase() === 'WHO IS LITTLE ELVIN?') {
+      bot.reply(message, 'Not to front, stopping interrupting him because he is someone who always keeps it :100: and he is really good developer. :100:')
+    }
+    if (message.text.toUpperCase() === 'WHO IS DIGGITY DOM?') {
+      bot.reply(message, 'Not to front, he is master of QA aka Smooth criminal of code breaks. Get it right. :100:')
+    }
+    if (message.text.toUpperCase() === 'WHO IS FRANK?') {
+      bot.reply(message, 'Not to front, Frank White was the King Of New York. Franco Jaramillo is the best producer since Dr Dre. :100:')
+    }
+    if (message.text.toUpperCase().indexOf('NAH') > -1) {
+      if (message.user === 'U08GT2AKC' || message.user === 'U09NPAG11') {
+        bot.reply(message, 'http://67.media.tumblr.com/4025b025994a6d2be7814be7ff1b6058/tumblr_n0ntau9Unr1qhcz8uo1_400.gif')
+      }
+    }
+    if (message.text.toUpperCase().indexOf('OH SHIT') > -1) {
+      if (message.user === 'U024GG01L' || message.user === 'U09NPAG11' || message.user === 'U09NPMD9D') {
+        bot.reply(message, 'http://i.imgur.com/aMgG2jh.gif')
+      }
+    }
+    if (message.text.toUpperCase().indexOf('FIGURE IT OUT') > -1) {
+      if (message.user === 'U024GG01L' || message.user === 'U09NPAG11') {
+        bot.reply(message, 'http://imgur.com/38bP71C.gif')
+      }
+    }
+    if (message.text.toUpperCase().indexOf('F TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+    }
+    if (message.text.toUpperCase().indexOf('LOL') > -1) {
+      rxn.push('laughing')
+    }
+    if (message.text.toUpperCase().indexOf('GET HIGH') > -1) {
+      rxn.push('weed')
+    }
+    if (message.text.toUpperCase().indexOf('CARROT') > -1) {
+      rxn.push('carrot')
+    }
+    if (message.text.toUpperCase().indexOf('SHAME') > -1) {
+      rxn.push('shame')
+    }
+    if (message.text.toUpperCase().indexOf('BOOK') > -1) {
+      pushBooks()
+    }
+    if (message.text.toUpperCase().indexOf('ILLITERATE') > -1) {
+      pushBooks()
+    }
+    if (message.text.toUpperCase().indexOf('RUNNING') > -1) {
+      rxn.push('running')
+    }
+    if (message.text.toUpperCase().indexOf('SHOTS FIRED') > -1) {
+      rxn.push('gun')
+    }
+    if (message.text.toUpperCase().indexOf('REAL FRIENDS') > -1) {
+      rxn.push('yeezy', 'question')
+      bot.reply(message, 'HOW MANY OF US ARE REAL FRIENDS? :yeezy:')
+    }
+    if (message.text.toUpperCase().indexOf('YOU ARE FIRED') > -1) {
+      rxn.push('the_donald')
+      bot.reply(message, 'You\'re fired! :the_donald:')
+    }
+    if (message.text.toUpperCase().indexOf('FOOD') > -1) {
+      pushFood()
+    }
+    if (message.text.toUpperCase().indexOf('SUCK IT') > -1) {
+      rxn.push('eggplant', 'open_mouth')
+    }
+    if (message.text.indexOf('420') > -1) {
+      rxn.push('weed')
+    }
+    if (message.text.indexOf(':turnip:') > -1) {
+      rxn.push('turnip', 'carrot')
+      bot.reply(message, '#TurnipSolutions')
+    }
+    if (message.text.indexOf('311') > -1) {
+      rxn.push('311')
+    }
+    if (message.text.indexOf('?') > -1) {
+      rxn.push('question')
+    }
+    if (message.text.indexOf(':weed:') > -1) {
+      rxn.push('weed', 'lifted')
+    }
+    if (message.text.toUpperCase().indexOf('WHO IS THE BEST WRESTLER EVER?') > -1) {
+      bot.reply(message, 'Not to front, it was Rehmat Qadir until he got hurt putting Hulk Hogan in a full nelson. That leaves THE UNDERTAKERS AS THE G.O.A.T. of WWE #Facts')
+    }
+    if (message.text.toUpperCase().indexOf('WHAT IS TURNIP SOLUTIONS?') > -1) {
+      rxn.push('turnip')
+      bot.reply(message, 'Turnip Solutions was established on 4/1/2016 with Brian Bowman as the CEO, Rebecca Ahn as the CTO, Jeff Escalante as the Triple OG, Brandon Romano as the Director of Technology and a turnip named Plebian. Turnip Solutions is the dark side of Carrot Creative, where people drink Kool-aid, work hard and play harder. Please eat more turnips to learn more information, but dont eat Plebian. Thanks.')
+    }
+    if (message.text.toUpperCase().indexOf('FARMIGO') > -1) {
+      pushFood()
+    }
+    reaction(bot, rxn, message)
   }
-  if (message.text.toUpperCase().indexOf('F TRAIN') > -1) {
-    rxn.push('f_train_sucks')
-  }
-  if (message.text.toUpperCase().indexOf('LOL') > -1) {
-    rxn.push('laughing')
-  }
-  if (message.text.toUpperCase().indexOf('GET HIGH') > -1) {
-    rxn.push('weed')
-  }
-  if (message.text.toUpperCase().indexOf('CARROT') > -1) {
-    rxn.push('carrot')
-  }
-  if (message.text.toUpperCase().indexOf('SHAME') > -1) {
-    rxn.push('shame')
-  }
-  if (message.text.toUpperCase().indexOf('BOOK') > -1) {
-    pushBooks()
-  }
-  if (message.text.toUpperCase().indexOf('ILLITERATE') > -1) {
-    pushBooks()
-  }
-  if (message.text.toUpperCase().indexOf('RUNNING') > -1) {
-    rxn.push('running')
-  }
-  if (message.text.toUpperCase().indexOf('SHOTS FIRED') > -1) {
-    rxn.push('gun')
-  }
-  if (message.text.toUpperCase().indexOf('REAL FRIENDS') > -1) {
-    rxn.push('yeezy', 'question')
-    bot.reply(message, 'HOW MANY OF US ARE REAL FRIENDS? :yeezy:')
-  }
-  if (message.text.toUpperCase().indexOf('YOU ARE FIRED') > -1) {
-    rxn.push('the_donald')
-    bot.reply(message, 'You\'re fired! :the_donald:')
-  }
-  if (message.text.toUpperCase().indexOf('FOOD') > -1) {
-    pushFood()
-  }
-  if (message.text.toUpperCase().indexOf('SUCK IT') > -1) {
-    rxn.push('eggplant', 'open_mouth')
-  }
-  if (message.text.indexOf('420') > -1) {
-    rxn.push('weed')
-  }
-  if (message.text.indexOf(':turnip:') > -1) {
-    rxn.push('turnip', 'carrot')
-    bot.reply(message, '#TurnipSolutions')
-  }
-  if (message.text.indexOf('311') > -1) {
-    rxn.push('311')
-  }
-  if (message.text.indexOf('?') > -1) {
-    rxn.push('question')
-  }
-  if (message.text.indexOf(':weed:') > -1) {
-    rxn.push('weed', 'lifted')
-  }
-  if (message.text.toUpperCase().indexOf('WHO IS THE BEST WRESTLER EVER?') > -1) {
-    bot.reply(message, 'Not to front, it was Rehmat Qadir until he got hurt putting Hulk Hogan in a full nelson. That leaves THE UNDERTAKERS AS THE G.O.A.T. of WWE #Facts')
-  }
-  if (message.text.toUpperCase().indexOf('WHAT IS TURNIP SOLUTIONS?') > -1) {
-    rxn.push('turnip')
-    bot.reply(message, 'Turnip Solutions was established on 4/1/2016 with Brian Bowman as the CEO, Rebecca Ahn as the CTO, Jeff Escalante as the Triple OG, Brandon Romano as the Director of Technology and a turnip named Plebian. Turnip Solutions is the dark side of Carrot Creative, where people drink Kool-aid, work hard and play harder. Please eat more turnips to learn more information, but dont eat Plebian. Thanks.')
-  }
-  if (message.text.toUpperCase().indexOf('FARMIGO') > -1) {
-    pushFood()
-  }
-  reaction(bot, rxn, message)
 }
 
 function reaction (aBot, rxn, message) {
