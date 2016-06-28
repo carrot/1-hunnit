@@ -109,6 +109,9 @@ controller.hears([
 )
 
 function react (bot, message) {
+  if (message.user === 'U024H2X4H' || message.user === 'U04MP4SSA') {
+    return
+  }
   var rxn = ['100']
   function pushBooks () {
     rxn.push(
@@ -157,49 +160,49 @@ function react (bot, message) {
     )
   }
   if (message.text.toUpperCase().indexOf('1 TRAIN') > -1) {
-    rxn.push('1_train')
+    rxn.push('1_train', 'mta')
     getTrainStatus('123', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('2 TRAIN') > -1) {
-    rxn.push('2_train')
+    rxn.push('2_train', 'mta')
     getTrainStatus('123', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('3 TRAIN') > -1) {
-    rxn.push('3_train')
+    rxn.push('3_train', 'mta')
     getTrainStatus('123', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('4 TRAIN') > -1) {
-    rxn.push('4_train')
+    rxn.push('4_train', 'mta')
     getTrainStatus('456', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('5 TRAIN') > -1) {
-    rxn.push('5_train')
+    rxn.push('5_train', 'mta')
     getTrainStatus('456', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('6 TRAIN') > -1) {
-    rxn.push('6_train')
+    rxn.push('6_train', 'mta')
     getTrainStatus('456', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('7 TRAIN') > -1) {
-    rxn.push('7_train')
+    rxn.push('7_train', 'mta')
     getTrainStatus('7', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('A TRAIN') > -1) {
-    rxn.push('a_train')
+    rxn.push('a_train', 'mta')
     getTrainStatus('ACE', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
@@ -211,85 +214,85 @@ function react (bot, message) {
     })
   }
   if (message.text.toUpperCase().indexOf('C TRAIN') > -1) {
-    rxn.push('c_train')
+    rxn.push('c_train', 'mta')
     getTrainStatus('ACE', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('D TRAIN') > -1) {
-    rxn.push('d_train')
+    rxn.push('d_train', 'mta')
     getTrainStatus('BDFM', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('E TRAIN') > -1) {
-    rxn.push('e_train')
+    rxn.push('e_train', 'mta')
     getTrainStatus('ACE', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('F TRAIN') > -1) {
-    rxn.push('f_train_sucks')
+    rxn.push('f_train_sucks', 'mta')
     getTrainStatus('BDFM', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('G TRAIN') > -1) {
-    rxn.push('g_train')
+    rxn.push('g_train', 'mta')
     getTrainStatus('G', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('J TRAIN') > -1) {
-    rxn.push('j_train')
+    rxn.push('j_train', 'mta')
     getTrainStatus('JZ', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('L TRAIN') > -1) {
-    rxn.push('l_train')
+    rxn.push('l_train', 'mta')
     getTrainStatus('L', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('M TRAIN') > -1) {
-    rxn.push('m_train')
+    rxn.push('m_train', 'mta')
     getTrainStatus('BDFM', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('N TRAIN') > -1) {
-    rxn.push('n_train')
+    rxn.push('n_train', 'mta')
     getTrainStatus('NQR', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('Q TRAIN') > -1) {
-    rxn.push('q_train')
+    rxn.push('q_train', 'mta')
     getTrainStatus('NQR', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('R TRAIN') > -1) {
-    rxn.push('r_train')
+    rxn.push('r_train', 'mta')
     getTrainStatus('NQR', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('S TRAIN') > -1) {
-    rxn.push('s_train')
+    rxn.push('s_train', 'mta')
     getTrainStatus('S', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('Z TRAIN') > -1) {
-    rxn.push('z_train')
+    rxn.push('z_train', 'mta')
     getTrainStatus('JZ', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
   if (message.text.toUpperCase().indexOf('SIR TRAIN') > -1) {
-    rxn.push('sir_train')
+    rxn.push('sir_train', 'mta')
     getTrainStatus('SIR', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
@@ -415,7 +418,6 @@ function getTrainStatus (train, callback) {
           }
         },
         ontext: function (text) {
-          nameField && console.log(text)
           if (nameField && text === train) {
             theTrain = true
           }
