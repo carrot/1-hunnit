@@ -3,6 +3,9 @@
 
 This bot keeps everything 100. One of the most hated and most loved, this bot likes to listen and react, even reply occasionally. No information is ever stored, no weird service calls, just a plain fun bot that doesn't care about analyitics or tracking. Enjoy.
 
+services :
+• train updates
+
 Visit Beep Boop to get the scoop on the the Beep Boop hosting platform. The Slack API documentation can be found here.
 
 ##Assumptions
