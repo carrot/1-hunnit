@@ -132,9 +132,6 @@ controller.hears([
 )
 
 function react (bot, message) {
-  if (message.user === 'U024H2X4H' || message.user === 'U04MP4SSA') {
-    return
-  }
   var rxn = ['100']
   function pushBooks () {
     rxn.push(
@@ -457,6 +454,9 @@ function react (bot, message) {
     getTrainStatus('SIR', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
+  }
+  if (message.user === 'U024H2X4H') {
+    return
   }
   if (message.user === 'U09NPAG11' || message.user === 'U08GT2AKC' || message.user === 'U0E5ATAET' || message.user === 'U0B21BV0E' || message.user === 'U09NPMD9D' || message.user === 'U024GG01L' || message.user === 'U054D7BLQ' || message.user === 'U03PUU0ET' || message.user === 'U024GGPQL' || message.user === 'U072XF54H' || message.user === 'U024GG4T9' || message.user === 'U024GG2BS') {
     if (message.text.toUpperCase() === 'WHO IS BRIAN BOWMAN?') {
