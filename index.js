@@ -1,5 +1,7 @@
 var Botkit = require('botkit')
 var beep = require('beepboop-botkit')
+var request = require('request')
+var htmlparser = require('htmlparser2')
 
 var token = process.env.SLACK_TOKEN
 
@@ -61,7 +63,28 @@ controller.hears([
   new RegExp('\\bwho is diggity dom?\\b', 'i'),
   new RegExp('\\bWHO IS MATT SLITER?\\b', 'i'),
   new RegExp('\\bwho is frank?\\b', 'i'),
+  new RegExp('\\b1 train', 'i'),
+  new RegExp('\\b2 train', 'i'),
+  new RegExp('\\b3 train', 'i'),
+  new RegExp('\\b4 train', 'i'),
+  new RegExp('\\b5 train', 'i'),
+  new RegExp('\\b6 train', 'i'),
+  new RegExp('\\b7 train', 'i'),
+  new RegExp('\\ba train', 'i'),
+  new RegExp('\\bb train', 'i'),
+  new RegExp('\\bc train', 'i'),
+  new RegExp('\\bd train', 'i'),
+  new RegExp('\\be train', 'i'),
   new RegExp('\\bf train', 'i'),
+  new RegExp('\\bg train', 'i'),
+  new RegExp('\\bj train', 'i'),
+  new RegExp('\\bl train', 'i'),
+  new RegExp('\\bm train', 'i'),
+  new RegExp('\\bn train', 'i'),
+  new RegExp('\\bq train', 'i'),
+  new RegExp('\\br train', 'i'),
+  new RegExp('\\bs train', 'i'),
+  new RegExp('\\bz train', 'i'),
   new RegExp('\\bget high\\b', 'i'),
   new RegExp('\\bcarrot', 'i'),
   new RegExp('\\bbook', 'i'),
@@ -133,7 +156,7 @@ function react (bot, message) {
     )
   }
 
-  if (message.user === 'U09NPAG11' || message.user === 'U08GT2AKC' || message.user === 'U0E5ATAET' || message.user === 'U0B21BV0E' || message.user === 'U09NPMD9D' || message.user === 'U024GG01L' || message.user === 'U054D7BLQ') {
+  if (message.user === 'U09NPAG11' || message.user === 'U08GT2AKC' || message.user === 'U0E5ATAET' || message.user === 'U0B21BV0E' || message.user === 'U09NPMD9D' || message.user === 'U024GG01L' || message.user === 'U054D7BLQ' || message.user === 'U03PUU0ET') {
     if (message.text.toUpperCase() === 'WHO IS BRIAN BOWMAN?') {
       bot.reply(message, 'Did you even have to ask that? He is someone who always keeps it :100:')
     }
@@ -168,8 +191,137 @@ function react (bot, message) {
         bot.reply(message, 'http://imgur.com/38bP71C.gif')
       }
     }
+    if (message.text.toUpperCase().indexOf('1 TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('123', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('2 TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('123', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('3 TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('123', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('4 TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('456', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('5 TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('456', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('6 TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('456', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('7 TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('7', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('A TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('ACE', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('B TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('BDFM', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('C TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('ACE', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('D TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('BDFM', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('E TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('ACE', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
     if (message.text.toUpperCase().indexOf('F TRAIN') > -1) {
       rxn.push('f_train_sucks')
+      getTrainStatus('BDFM', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('G TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('G', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('J TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('JZ', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('L TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('L', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('M TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('BDFM', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('N TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('NQR', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('Q TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('NQR', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('R TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('NQR', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('S TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('S', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
+    }
+    if (message.text.toUpperCase().indexOf('Z TRAIN') > -1) {
+      rxn.push('f_train_sucks')
+      getTrainStatus('JZ', function (text, train) {
+        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      })
     }
     if (message.text.toUpperCase().indexOf('LOL') > -1) {
       rxn.push('laughing')
@@ -237,6 +389,44 @@ function react (bot, message) {
     }
     reaction(bot, rxn, message)
   }
+}
+
+function getTrainStatus (train, callback) {
+  request('http://web.mta.info/status/serviceStatus.txt', function (error, response, body) {
+    if (!error && response.statusCode === 200) {
+      var nameField = false
+      var theTrain = false
+      var theTrainStatus = false
+      var parser = new htmlparser.Parser({
+        onopentag: function (name, attribs) {
+          if (name === 'name') {
+            nameField = true
+          }
+          if (name === 'status' && theTrain === true) {
+            theTrainStatus = true
+            theTrain = false
+          }
+        },
+        ontext: function (text) {
+          nameField && console.log(text)
+          if (nameField && text === train) {
+            theTrain = true
+          }
+          if (theTrainStatus === true) {
+            callback(text, train)
+            theTrainStatus = false
+          }
+        },
+        onclosetag: function (tagname) {
+          if (tagname === 'name') {
+            nameField = false
+          }
+        }
+      }, {decodeEntities: true})
+      parser.write(body)
+      parser.end()
+    }
+  })
 }
 
 function reaction (aBot, rxn, message) {
