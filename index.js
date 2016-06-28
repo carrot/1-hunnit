@@ -99,7 +99,7 @@ controller.hears([
   new RegExp('\\bd_train', 'i'),
   new RegExp('\\be_train', 'i'),
   new RegExp('\\bf_train_sucks', 'i'),
-  new RegExp('\\bg train', 'i'),
+  new RegExp('\\bg_train', 'i'),
   new RegExp('\\bj_train', 'i'),
   new RegExp('\\bl_train', 'i'),
   new RegExp('\\bm_train', 'i'),
