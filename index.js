@@ -86,6 +86,29 @@ controller.hears([
   new RegExp('\\bs train', 'i'),
   new RegExp('\\bz train', 'i'),
   new RegExp('\\bsir train', 'i'),
+  new RegExp('\\b1_train', 'i'),
+  new RegExp('\\b2_train', 'i'),
+  new RegExp('\\b3_train', 'i'),
+  new RegExp('\\b4_train', 'i'),
+  new RegExp('\\b5_train', 'i'),
+  new RegExp('\\b6_train', 'i'),
+  new RegExp('\\b7_train', 'i'),
+  new RegExp('\\ba_train', 'i'),
+  new RegExp('\\bb_train', 'i'),
+  new RegExp('\\bc_train', 'i'),
+  new RegExp('\\bd_train', 'i'),
+  new RegExp('\\be_train', 'i'),
+  new RegExp('\\bf_train_sucks', 'i'),
+  new RegExp('\\bg train', 'i'),
+  new RegExp('\\bj_train', 'i'),
+  new RegExp('\\bl_train', 'i'),
+  new RegExp('\\bm_train', 'i'),
+  new RegExp('\\bn_train', 'i'),
+  new RegExp('\\bq_train', 'i'),
+  new RegExp('\\br_train', 'i'),
+  new RegExp('\\bs_train', 'i'),
+  new RegExp('\\bz_train', 'i'),
+  new RegExp('\\bsir_train', 'i'),
   new RegExp('\\bget high\\b', 'i'),
   new RegExp('\\bcarrot', 'i'),
   new RegExp('\\bbook', 'i'),
@@ -297,7 +320,144 @@ function react (bot, message) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
-
+  if (message.text.toUpperCase().indexOf('1_TRAIN') > -1) {
+    rxn.push('1_train', 'mta')
+    getTrainStatus('123', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('2_TRAIN') > -1) {
+    rxn.push('2_train', 'mta')
+    getTrainStatus('123', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('3_TRAIN') > -1) {
+    rxn.push('3_train', 'mta')
+    getTrainStatus('123', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('4_TRAIN') > -1) {
+    rxn.push('4_train', 'mta')
+    getTrainStatus('456', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('5_TRAIN') > -1) {
+    rxn.push('5_train', 'mta')
+    getTrainStatus('456', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('6_TRAIN') > -1) {
+    rxn.push('6_train', 'mta')
+    getTrainStatus('456', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('7_TRAIN') > -1) {
+    rxn.push('7_train', 'mta')
+    getTrainStatus('7', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('A_TRAIN') > -1) {
+    rxn.push('a_train', 'mta')
+    getTrainStatus('ACE', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('B_TRAIN') > -1) {
+    rxn.push('b_train')
+    getTrainStatus('BDFM', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('C_TRAIN') > -1) {
+    rxn.push('c_train', 'mta')
+    getTrainStatus('ACE', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('D_TRAIN') > -1) {
+    rxn.push('d_train', 'mta')
+    getTrainStatus('BDFM', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('E_TRAIN') > -1) {
+    rxn.push('e_train', 'mta')
+    getTrainStatus('ACE', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('F_TRAIN') > -1) {
+    rxn.push('f_train_sucks', 'mta')
+    getTrainStatus('BDFM', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('G_TRAIN') > -1) {
+    rxn.push('g_train', 'mta')
+    getTrainStatus('G', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('J_TRAIN') > -1) {
+    rxn.push('j_train', 'mta')
+    getTrainStatus('JZ', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('L_TRAIN') > -1) {
+    rxn.push('l_train', 'mta')
+    getTrainStatus('L', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('M_TRAIN') > -1) {
+    rxn.push('m_train', 'mta')
+    getTrainStatus('BDFM', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('N_TRAIN') > -1) {
+    rxn.push('n_train', 'mta')
+    getTrainStatus('NQR', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('Q_TRAIN') > -1) {
+    rxn.push('q_train', 'mta')
+    getTrainStatus('NQR', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('R_TRAIN') > -1) {
+    rxn.push('r_train', 'mta')
+    getTrainStatus('NQR', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('S_TRAIN') > -1) {
+    rxn.push('s_train', 'mta')
+    getTrainStatus('S', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('Z_TRAIN') > -1) {
+    rxn.push('z_train', 'mta')
+    getTrainStatus('JZ', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
+  if (message.text.toUpperCase().indexOf('SIR_TRAIN') > -1) {
+    rxn.push('sir_train', 'mta')
+    getTrainStatus('SIR', function (text, train) {
+      bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+    })
+  }
   if (message.user === 'U09NPAG11' || message.user === 'U08GT2AKC' || message.user === 'U0E5ATAET' || message.user === 'U0B21BV0E' || message.user === 'U09NPMD9D' || message.user === 'U024GG01L' || message.user === 'U054D7BLQ' || message.user === 'U03PUU0ET' || message.user === 'U024GGPQL' || message.user === 'U072XF54H' || message.user === 'U024GG4T9' || message.user === 'U024GG2BS') {
     if (message.text.toUpperCase() === 'WHO IS BRIAN BOWMAN?') {
       bot.reply(message, 'Did you even have to ask that? He is someone who always keeps it :100:')
