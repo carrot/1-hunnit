@@ -392,7 +392,7 @@ function react (bot, message) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
     })
   }
-  if (message.text.toUpperCase().indexOf('F_TRAIN') > -1) {
+  if (message.text.toUpperCase().indexOf('F_TRAIN_SUCKS') > -1) {
     rxn.push('f_train_sucks', 'mta')
     getTrainStatus('BDFM', function (text, train) {
       bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
