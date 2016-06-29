@@ -565,7 +565,16 @@ function getTrainStatus (train, callback) {
   request('http://web.mta.info/status/serviceStatus.txt', function (error, response, body) {
     if (!error && response.statusCode === 200) {
       var tree = xmlParser(body)
-      console.log(tree)
+      tree[0].content[2].content.map((tag) => {
+        const name = tag.content[0]
+        const status = tag.content[1]
+        const details = tag.content[2]
+
+        if (train === name) {
+          console.log(status)
+          console.log(details)
+        }
+      })
     }
   })
 }
