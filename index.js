@@ -1,7 +1,7 @@
 var Botkit = require('botkit')
 var beep = require('beepboop-botkit')
 var request = require('request')
-var htmlparser = require('htmlparser2')
+var xmlParser = require('posthtml-parser')
 
 var token = process.env.SLACK_TOKEN
 
@@ -564,36 +564,8 @@ function react (bot, message) {
 function getTrainStatus (train, callback) {
   request('http://web.mta.info/status/serviceStatus.txt', function (error, response, body) {
     if (!error && response.statusCode === 200) {
-      var nameField = false
-      var theTrain = false
-      var theTrainStatus = false
-      var parser = new htmlparser.Parser({
-        onopentag: function (name, attribs) {
-          if (name === 'name') {
-            nameField = true
-          }
-          if (name === 'status' && theTrain === true) {
-            theTrainStatus = true
-            theTrain = false
-          }
-        },
-        ontext: function (text) {
-          if (nameField && text === train) {
-            theTrain = true
-          }
-          if (theTrainStatus === true) {
-            callback(text, train)
-            theTrainStatus = false
-          }
-        },
-        onclosetag: function (tagname) {
-          if (tagname === 'name') {
-            nameField = false
-          }
-        }
-      }, {decodeEntities: true})
-      parser.write(body)
-      parser.end()
+      var tree = xmlParser()
+      console.log(tree)
     }
   })
 }
