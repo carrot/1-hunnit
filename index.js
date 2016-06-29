@@ -564,7 +564,7 @@ function react (bot, message) {
 function getTrainStatus (train, callback) {
   request('http://web.mta.info/status/serviceStatus.txt', function (error, response, body) {
     if (!error && response.statusCode === 200) {
-      var tree = xmlParser()
+      var tree = xmlParser(body)
       console.log(tree)
     }
   })
