@@ -1,7 +1,8 @@
 var Botkit = require('botkit')
 var beep = require('beepboop-botkit')
 var request = require('request')
-var {parseString} = require('xml2js')
+var parseString = require('xml2js').parseString
+var htmlToText = require('html-to-text')
 
 var token = process.env.SLACK_TOKEN
 
@@ -213,8 +214,11 @@ function react (bot, message) {
   for (var i = 0; i < subwayInfo.length; i++) {
     if (message.text.toUpperCase().indexOf(subwayInfo[i][0]) > -1) {
       rxn.push(subwayInfo[i][1], 'mta')
-      getTrainStatus(subwayInfo[i][2], function (text, train) {
-        bot.reply(message, 'THE MTA SAYS ::: ' + text + ' FOR THE ' + train)
+      getTrainStatus(subwayInfo[i][2], function (name, status, text, date, time) {
+        var filteredText = htmlToText.fromString(text, {
+          wordwrap: 130
+        })
+        bot.reply(message, 'THE MTA SAYS ::: ' + status + ' FOR THE ' + name + '\n' + filteredText + '\n' + date + '\n' + time)
       })
     }
   }
@@ -337,7 +341,10 @@ function getTrainStatus (train, callback) {
     parseString(body, (err, res) => {
       if (err) throw err
       res.service.subway[0].line.map((line) => {
-        console.log(line)
+        if (train === line.name[0]) {
+          callback(line.name, line.status, line.text, line.Date, line.Time)
+          return
+        }
       })
     })
   })
