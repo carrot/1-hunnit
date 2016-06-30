@@ -1,7 +1,7 @@
 var Botkit = require('botkit')
 var beep = require('beepboop-botkit')
 var request = require('request')
-var xmlParser = require('posthtml-parser')
+var {parseString} = require('xml2js')
 
 var token = process.env.SLACK_TOKEN
 
@@ -325,20 +325,21 @@ function react (bot, message) {
   }
 }
 
+/**
+ * Gets the train's status. You never would have guessed this based on the
+ * function name so good thing I added this jsdoc block!
+ * @param {String} train - name of the train line
+ * @param {Function} callback - passes back the result
+ */
 function getTrainStatus (train, callback) {
-  request('http://web.mta.info/status/serviceStatus.txt', function (error, response, body) {
-    if (!error && response.statusCode === 200) {
-      var tree = xmlParser(body)
-      console.log(tree)
-      console.log('0 ' + tree[0].content[0].content)
-      console.log('1 ' + tree[0].content[1].content)
-      console.log('2 ' + tree[0].content[2].content)
-      console.log('22 ' + tree[0].content[2].content.object)
-      console.log('3 ' + tree[0].content[3].content)
-      // tree[0].content[2].content.map((tag) => {
-      //   console.log('tag ' + tag.content)
-      // })
-    }
+  request('http://web.mta.info/status/serviceStatus.txt', (err, res, body) => {
+    if (err) throw err
+    parseString(body, (err, res) => {
+      if (err) throw err
+      res.service.subway[0].line.map((line) => {
+        console.log(line)
+      })
+    })
   })
 }
 
