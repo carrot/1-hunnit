@@ -314,7 +314,7 @@ function react (bot, message) {
     }
 
     if (message.text.toUpperCase().indexOf('NAH') > -1) {
-      if (message.user === process.env.ADMIN2 || message.user === process.env.ADMIN1 {
+      if (message.user === process.env.ADMIN2 || message.user === process.env.ADMIN1) {
         bot.reply(message, 'http://67.media.tumblr.com/4025b025994a6d2be7814be7ff1b6058/tumblr_n0ntau9Unr1qhcz8uo1_400.gif')
       }
     }
